@@ -1,6 +1,6 @@
 # WordPress
 
-This is the Composer package with WordPress setup.
+This is the Composer project with WordPress setup.
 
 ## Installation
 
@@ -16,27 +16,10 @@ $ composer global require piotrpress/wordpress-composer
 $ composer config -g allow-plugins.piotrpress/wordpress-composer true
 ```
 
-## Example `composer.json` file
+3. Create new project:
 
-```json
-{
-  "type": "project",
-  "require": {
-    "piotrpress/wordpress": "^1.0"
-  },
-  "config": {
-    "allow-plugins": {
-      "piotrpress/wordpress-installer": true
-    },
-    "scripts": {
-      "post-update-cmd": [
-        "cp vendor/piotrpress/wordpress-htaccess/res/.htaccess ./.htaccess",
-        "cp vendor/piotrpress/wordpress-config/res/wp-config.php ./wp-config.php",
-        "cp -n vendor/piotrpress/wordpress-config/res/.config ./.config"
-      ]
-    }
-  }
-}
+```shell
+$ composer create-project piotrpress/wordpress --ask 
 ```
 
 ## Requirements

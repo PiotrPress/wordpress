@@ -1,8 +1,8 @@
 {
   "name": "piotrpress/wordpress",
-  "type": "package",
+  "type": "project",
   "license": "MIT",
-  "description": "This is the Composer package with WordPress setup.",
+  "description": "This is the Composer project with WordPress setup.",
   "homepage": "https://github.com/PiotrPress/wordpress",
   "authors": [
     {
@@ -13,8 +13,16 @@
   "keywords": [ "wordpress", "blog", "cms" ],
   "require": {
     "wordpress-core/full": "*",
-    "piotrpress/wordpress-config": "^1.0",
     "piotrpress/wordpress-htaccess": "^1.0",
+    "piotrpress/wordpress-config": "^1.0",
     "piotrpress/wordpress-installer": "^1.0"
+  },
+  "config": {
+    "allow-plugins": {
+      "piotrpress/wordpress-installer": true
+    }
+  },
+  "scripts": {
+    "post-create-project-cmd": "@php setup.php"
   }
 }
