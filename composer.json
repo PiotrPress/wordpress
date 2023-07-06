@@ -12,9 +12,11 @@
   ],
   "keywords": [ "wordpress", "blog", "cms" ],
   "require": {
-    "wordpress-core/full": "*",
+    "wordpress-core/no-content": "*",
+    "wordpress-theme/twentytwentythree": "*",
+    "wordpress-plugin/hello-dolly": "*",
     "piotrpress/wordpress-htaccess": "^1.0",
-    "piotrpress/wordpress-config": "^1.0",
+    "piotrpress/wordpress-config": "^3.0",
     "piotrpress/wordpress-installer": "^1.0"
   },
   "config": {
@@ -23,6 +25,6 @@
     }
   },
   "scripts": {
-    "post-create-project-cmd": "@php setup.php"
+    "post-update-cmd": "@php setup.php"
   }
 }

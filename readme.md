@@ -4,7 +4,7 @@ This is the Composer project with WordPress setup.
 
 ## Installation
 
-1. Add the plugin as a global composer requirement:
+1. Add `wordpress-composer` composer plugin as a global composer requirement:
 
 ```shell
 $ composer global require piotrpress/wordpress-composer
